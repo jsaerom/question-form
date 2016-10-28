@@ -4,7 +4,6 @@ import moment from 'moment';
 export default Ember.Component.extend({
   actions: {
     save() {
-      debugger;
       var params = {
         answer: this.get('answer'),
         name: this.get('name'),

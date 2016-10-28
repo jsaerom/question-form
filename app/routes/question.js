@@ -6,11 +6,13 @@ export default Ember.Route.extend({
   },
   actions: {
     delete(question){
-      if(confirm('Do you really want to delete this question?')){
-        console.log(question);
-        question.destroyRecord();
-        this.transitionTo('index');
-      }
+      var answer_deletions = question.get('answers').map(function(answer){
+        return answer.destroyRecord();
+      });
+      Ember.RSVP.all(answer_deletions).then(function(){
+        return question.destroyRecord();
+      });
+      this.transitionTo('index');
     },
     updateQuestion(params, question){
       Object.keys(params).forEach(function(key){
@@ -23,13 +25,16 @@ export default Ember.Route.extend({
       this.transitionTo('question');
     },
     saveAnswer(params){
-      alert('test');
       var newAnswer = this.store.createRecord('answer', params);
       var question = params.question;
       question.get('answers').addObject(newAnswer);
       newAnswer.save().then(function(){
         return question.save();
       });
+      this.transitionTo('question');
+    },
+    deleteAnswer(answer){
+      answer.destroyRecord();
       this.transitionTo('question');
     }
   }
