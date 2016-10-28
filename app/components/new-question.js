@@ -9,12 +9,13 @@ export default Ember.Component.extend({
     },
     save(){
       var params = {
-        question: this.get('question'),
+        title: this.get('title'),
         author: this.get('author'),
         details: this.get('details'),
-        timestamp: moment().format('LL')
+        timestamp: moment().format('LL h:mm:ss a'),
       };
       this.sendAction('saveQuestion', params);
+      this.set('addQuestion', false);
       this.set('question', '');
       this.set('author', '');
       this.set('details', '');

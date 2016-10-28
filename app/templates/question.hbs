@@ -1,7 +1,8 @@
 <div class="questionDetail">
-  <h1>Q: {{model.question}}</h1>
+  <h1>Q: {{model.title}}</h1>
   <h2>Posted by {{model.author}}</h2>
   <h3>Asked on {{model.timestamp}}</h3>
   <p>{{model.details}}</p>
 </div>
-<button {{action 'delete' question}}>Delete Questions</button>
+<button {{action 'delete' model}}>Delete Questions</button>
+{{update-question question=model updateQuestion="updateQuestion"}}

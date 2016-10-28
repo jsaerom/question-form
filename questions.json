@@ -1,23 +1,13 @@
 {
   "questions": [{
-      "question": "What color is an apple?",
+      "title": "What color is an apple?",
       "author": "Anonymous",
       "details": "I would like to know what color apples are.",
       "timestamp": "2015-12-23"
     },{
-      "question": "What is the difference between let and var?",
+      "title": "What is the difference between let and var?",
       "author": "Arthur A.",
       "details": "I am struggling to understand the difference between let and var. Please help",
       "timestamp": "2016-02-01"
-    }],
-  "answers": [{
-      "answer": "The answer is...",
-      "author": "Anonymous",
-      "timestamp": "2016-03-12"
-      },
-    {
-      "answer": "The answer is...",
-      "author": "Anonymous",
-      "timestamp": "2016-10-21"
-      }]
+    }]
 }
