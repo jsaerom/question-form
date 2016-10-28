@@ -1,5 +1,7 @@
-{{#link-to 'question' question.id}}
-  <h1>Q: {{question.title}}</h1>
-  <h2>Posted by {{question.author}}</h2>
-  <h3>Asked on {{question.timestamp}}</h3>
-{{/link-to}}
+<div class="questionTile">
+  {{#link-to 'question' question.id}}
+    <h1><span class="decorator">Q:</span> {{question.title}}</h1>
+  {{/link-to}}
+  <h6>Posted by {{question.author}} | Asked on {{question.timestamp}}</h6>
+</div>
+<hr class="styled">

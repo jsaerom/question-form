@@ -4,9 +4,13 @@ import moment from 'moment';
 export default Ember.Component.extend({
   actions: {
     save() {
+      var userInput = this.get('name');
+      if(userInput === ''){
+        userInput = "Anonymous";
+      }
       var params = {
         answer: this.get('answer'),
-        name: this.get('name'),
+        author: userInput,
         timestamp: moment().format('LL h:mm:ss a'),
         question: this.get('question')
       };
