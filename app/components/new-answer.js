@@ -5,7 +5,7 @@ export default Ember.Component.extend({
   actions: {
     save() {
       var userInput = this.get('name');
-      if(userInput === ''){
+      if(userInput === undefined || userInput === ''){
         userInput = "Anonymous";
       }
       var params = {

@@ -1,5 +1,16 @@
 body{
   font-family: 'Roboto', sans-serif;
+  color: #525252;
+}
+.container{
+  width: 80%;
+}
+.row{
+  width: 90%;
+  margin: 0 auto;
+}
+hr{
+  width: 90%;
 }
 hr.styled{
   border-top: 1px solid #8c8b8b;
@@ -30,4 +41,13 @@ hr.styled:after{
 .decorator{
   font-family: 'Montserrat Alternates', sans-serif;
   font-size: 35px;
+}
+.col-sm-2{
+  text-align: center;
+}
+.btn{
+  border: 3px solid #525252;
+  background-color: white;
+  color: #525252;
+  font-weight: bolder;
 }

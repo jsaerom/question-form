@@ -12,8 +12,8 @@
       <label for="author">Your Name</label>
       {{input value=author type="text" id="author"}}
     </div>
-    <button>Ask!</button>
+    <button class="btn">Ask!</button>
   </form>
 {{else}}
-  <button {{action 'displayForm'}}>Add Question</button>
+  <button class="btn" {{action 'displayForm'}}>Ask a Question</button>
 {{/if}}

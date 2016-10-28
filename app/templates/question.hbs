@@ -4,7 +4,7 @@
   <h6>Asked on {{model.timestamp}}</h6>
   <p>{{model.details}}</p>
 </div>
-<button {{action 'delete' model}}>Delete Questions</button>
+<button class="btn" {{action 'delete' model}}>Delete Questions</button>
 {{update-question question=model updateQuestion="updateQuestion"}}
 {{#each model.answers as |answer|}}
   <hr class="styled">

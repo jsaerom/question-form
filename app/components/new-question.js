@@ -9,10 +9,9 @@ export default Ember.Component.extend({
     },
     save(){
       var userInput = this.get('author');
-      if(userInput === undefined){
+      if(userInput === undefined || userInput === ''){
         userInput = "Anonymous";
       }
-      console.log(userInput);
       var params = {
         title: this.get('title'),
         author: userInput,
